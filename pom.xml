@@ -5,9 +5,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>se.michaelthelin.spotify</groupId>
-    <artifactId>spotify-web-api-java</artifactId>
-    <version>1.5.0</version>
+    <groupId>spotifyExporter</groupId>
+    <artifactId>spotifyExporter</artifactId>
+    <version>1.0.0</version>
 
     <packaging>jar</packaging>
 
@@ -47,6 +47,18 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>playlistExporter.EntryPoint</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
