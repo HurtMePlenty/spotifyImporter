@@ -1,5 +1,6 @@
-userId=zdarklin
+userId=1216777640
 clientSecret=a3567a6b58f64f82980df940680069b0
 clientId=4391e7421693481e813d357b56d65053
 outputPath=./result
-separator=,
+separator=;
+additionalFields=discNumber|trackNumber|externalUrl|availableMarkets|previewUrl|duration|popularity|href|uri|id

@@ -73,14 +73,14 @@ public class EntryPoint
 
                 if (lowKey.equals("additionalfields"))
                 {
-                    String[] values = keyValue[1].trim().split("|");
+                    String[] values = keyValue[1].trim().split("\\|");
                     for (String value : values)
                     {
-                        if (StringUtils.isEmpty(value.trim()))
+                        if (StringUtils.isEmpty(value.trim()) || value.trim().startsWith("-"))
                         {
                             continue;
                         }
-                        additionalFields.add(value);
+                        additionalFields.add(value.toLowerCase());
                     }
                 }
             }
